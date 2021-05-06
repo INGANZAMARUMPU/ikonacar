@@ -1,13 +1,11 @@
 from django.db import models
 
 class User(models.Model):
-	id = models.AutoField()
 	nom_user = models.CharField(max_length=64)
 	pass_user = models.CharField(max_length=64)
 	type_user = models.CharField(max_length=16)
 
 class Vehicule(models.Model):
-	id_car = models.AutoField()
 	nom = models.CharField(max_length=32)
 	marque = models.CharField(max_length=16)
 	model = models.CharField(max_length=32)
@@ -15,7 +13,6 @@ class Vehicule(models.Model):
 	etat = models.CharField(max_length=16)
 
 class Panne(models.Model):
-	id_panne = models.AutoField()
 	cout = models.IntegerField(max_length=10)
 	nom_cas = models.CharField(max_length=32)
 	nom_panne = models.CharField(max_length=32)
@@ -25,7 +22,6 @@ class Panne(models.Model):
 	date = models.CharField(max_length=16)
 
 class Location(models.Model):
-	id_location = models.AutoField()
 	cout_location = models.IntegerField(max_length=10)
 	type_location = models.CharField(max_length=10)
 	nom_cas = models.CharField(max_length=32)
